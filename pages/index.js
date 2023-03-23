@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="w-full lg:w-1/3 p-4 text-center mx-auto">
+      <div className="w-full lg:w-1/3 p-1 sm:p-4 text-center mx-auto">
         <section className="container mx-auto p-2 sm:p-6 font-mono">
           <TickerTable />
         </section>

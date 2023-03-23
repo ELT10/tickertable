@@ -75,12 +75,12 @@ const TickerTable = () => {
     <>
       {" "}
       {btc.length != 0 && (
-        <div className="w-full bg-gray-100 p-4 rounded-lg shadow-md mb-8">
+        <div className="w-full bg-gray-100 p-2 sm:p-4 rounded-lg shadow-md mb-8">
           <div className="flex items-center justify-between">
             <div className="w-1/5">
               <h2 className="text-lg font-medium text-gray-800">BTC-USDT</h2>
             </div>
-            <div className="w-1/5">
+            <div className="w-1/3 sm:w-1/5">
               <h2 className="text-lg font-medium text-gray-800">
                 ${parseFloat(btc[btc.length - 1]).toFixed(3)}
               </h2>
@@ -95,7 +95,7 @@ const TickerTable = () => {
                 secs ago)
               </p>
             </div>
-            <div className="w-1/5 text-center">
+            <div className="w-1/6 sm:w-1/5 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
                 {btc[btc.length - 1] - btc[btc.length - 2] > 0 ? (
@@ -113,7 +113,7 @@ const TickerTable = () => {
                 )}
               </h3>
             </div>
-            <div className="w-1/3">
+            <div className="w-1/4 sm:w-1/3">
               <Sparklines data={btc}>
                 <SparklinesLine color="green" />
               </Sparklines>
@@ -122,12 +122,12 @@ const TickerTable = () => {
         </div>
       )}
       {matic.length != 0 && (
-        <div className="w-full bg-gray-100 p-4 rounded-lg shadow-md mb-8">
+        <div className="w-full bg-gray-100 p-2 sm:p-4 rounded-lg shadow-md mb-8">
           <div className="flex items-center justify-between">
             <div className="w-1/5">
               <h2 className="text-lg font-medium text-gray-800">MATIC-USDT</h2>
             </div>
-            <div className="w-1/5">
+            <div className="w-1/3 sm:w-1/5">
               <h2 className="text-lg font-medium text-gray-800">
                 ${parseFloat(matic[matic.length - 1]).toFixed(3)}
               </h2>
@@ -142,7 +142,7 @@ const TickerTable = () => {
                 secs ago)
               </p>
             </div>
-            <div className="w-1/5 text-center">
+            <div className="w-1/6 sm:w-1/5 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
                 {matic[matic.length - 1] - matic[matic.length - 2] > 0 ? (
@@ -160,7 +160,7 @@ const TickerTable = () => {
                 )}
               </h3>
             </div>
-            <div className="w-1/3">
+            <div className="w-1/4 sm:w-1/3">
               <Sparklines data={matic}>
                 <SparklinesLine color="green" />
               </Sparklines>
@@ -169,12 +169,12 @@ const TickerTable = () => {
         </div>
       )}
       {bnb.length != 0 && (
-        <div className="w-full bg-gray-100 p-4 rounded-lg shadow-md mb-8">
+        <div className="w-full bg-gray-100 p-2 sm:p-4 rounded-lg shadow-md mb-8">
           <div className="flex items-center justify-between">
             <div className="w-1/5">
               <h2 className="text-lg font-medium text-gray-800">BNB-USDT</h2>
             </div>
-            <div className="w-1/5">
+            <div className="w-1/3 sm:w-1/5">
               <h2 className="text-lg font-medium text-gray-800">
                 ${parseFloat(bnb[bnb.length - 1]).toFixed(3)}
               </h2>
@@ -189,7 +189,7 @@ const TickerTable = () => {
                 secs ago)
               </p>
             </div>
-            <div className="w-1/5 text-center">
+            <div className="w-1/6 sm:w-1/5 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
                 {bnb[bnb.length - 1] - bnb[bnb.length - 2] > 0 ? (
@@ -207,7 +207,7 @@ const TickerTable = () => {
                 )}
               </h3>
             </div>
-            <div className="w-1/3">
+            <div className="w-1/4 sm:w-1/3">
               <Sparklines data={bnb}>
                 <SparklinesLine color="green" />
               </Sparklines>
@@ -216,12 +216,12 @@ const TickerTable = () => {
         </div>
       )}
       {eth.length != 0 && (
-        <div className="w-full bg-gray-100 p-4 rounded-lg shadow-md mb-8">
+        <div className="w-full bg-gray-100 p-2 sm:p-4 rounded-lg shadow-md mb-8">
           <div className="flex items-center justify-between">
             <div className="w-1/5">
               <h2 className="text-lg font-medium text-gray-800">ETH-USDT</h2>
             </div>
-            <div className="w-1/5">
+            <div className="w-1/3 sm:w-1/5">
               <h2 className="text-lg font-medium text-gray-800">
                 ${parseFloat(eth[eth.length - 1]).toFixed(3)}
               </h2>
@@ -236,7 +236,7 @@ const TickerTable = () => {
                 secs ago)
               </p>
             </div>
-            <div className="w-1/5 text-center">
+            <div className="w-1/6 sm:w-1/5 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
                 {eth[eth.length - 1] - eth[eth.length - 2] > 0 ? (
@@ -254,7 +254,7 @@ const TickerTable = () => {
                 )}
               </h3>
             </div>
-            <div className="w-1/3">
+            <div className="w-1/4 sm:w-1/3">
               <Sparklines data={eth}>
                 <SparklinesLine color="green" />
               </Sparklines>
