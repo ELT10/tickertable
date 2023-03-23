@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 438px) {
+  .mobwhitespacepre {
+    white-space: pre;
+  }
+}
+
+.greenlight {
+  color: #30e630;
+  font-size: 11px;
+}
+
+.redlight {
+  color: #ff4343;
+  font-size: 11px;
+}
