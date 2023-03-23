@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Pusher from "pusher-js";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import {
-  IoMdArrowDropupCircle,
-  IoMdArrowDropdownCircle,
-} from "react-icons/io5";
+  IoIosArrowDropdownCircle,
+  IoIosArrowDropupCircle,
+} from "react-icons/io";
 
 const TickerTable = () => {
   const [ts, setts] = useState([]);
@@ -82,7 +82,19 @@ const TickerTable = () => {
             <div className="w-1/3 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
-                {btc[btc.length - 1] - btc[btc.length - 2] > 0 ? "^" : "<"}
+                {btc[btc.length - 1] - btc[btc.length - 2] > 0 ? (
+                  <IoIosArrowDropupCircle
+                    color="green"
+                    size="25px"
+                    className="mx-auto"
+                  />
+                ) : (
+                  <IoIosArrowDropdownCircle
+                    color="red"
+                    size="25px"
+                    className="mx-auto"
+                  />
+                )}
               </h3>
             </div>
             <div className="w-1/3">
@@ -102,9 +114,19 @@ const TickerTable = () => {
             <div className="w-1/3 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
-                {matic[matic.length - 1] - matic[matic.length - 2] > 0
-                  ? "^"
-                  : "<"}
+                {matic[matic.length - 1] - matic[matic.length - 2] > 0 ? (
+                  <IoIosArrowDropupCircle
+                    color="green"
+                    size="25px"
+                    className="mx-auto"
+                  />
+                ) : (
+                  <IoIosArrowDropdownCircle
+                    color="red"
+                    size="25px"
+                    className="mx-auto"
+                  />
+                )}
               </h3>
             </div>
             <div className="w-1/3">
@@ -124,7 +146,19 @@ const TickerTable = () => {
             <div className="w-1/3 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
-                {bnb[bnb.length - 1] - bnb[bnb.length - 2] > 0 ? "^" : "<"}
+                {bnb[bnb.length - 1] - bnb[bnb.length - 2] > 0 ? (
+                  <IoIosArrowDropupCircle
+                    color="green"
+                    size="25px"
+                    className="mx-auto"
+                  />
+                ) : (
+                  <IoIosArrowDropdownCircle
+                    color="red"
+                    size="25px"
+                    className="mx-auto"
+                  />
+                )}
               </h3>
             </div>
             <div className="w-1/3">
@@ -144,7 +178,19 @@ const TickerTable = () => {
             <div className="w-1/3 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
-                {eth[eth.length - 1] - eth[eth.length - 2] > 0 ? "^" : "<"}
+                {eth[eth.length - 1] - eth[eth.length - 2] > 0 ? (
+                  <IoIosArrowDropupCircle
+                    color="green"
+                    size="25px"
+                    className="mx-auto"
+                  />
+                ) : (
+                  <IoIosArrowDropdownCircle
+                    color="red"
+                    size="25px"
+                    className="mx-auto"
+                  />
+                )}
               </h3>
             </div>
             <div className="w-1/3">
