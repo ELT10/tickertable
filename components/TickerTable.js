@@ -46,6 +46,7 @@ const TickerTable = () => {
       Date.now() / 1000 - parseFloat(localStorage.getItem("datats")) <
       20000
     ) {
+      setts(localStorage.getItem("datats"));
       setbtc(JSON.parse(localStorage.getItem("btcdata")));
       setmatic(JSON.parse(localStorage.getItem("maticdata")));
       setbnb(JSON.parse(localStorage.getItem("bnbdata")));
@@ -76,10 +77,25 @@ const TickerTable = () => {
       {btc.length != 0 && (
         <div className="w-full bg-gray-100 p-4 rounded-lg shadow-md mb-8">
           <div className="flex items-center justify-between">
-            <div className="w-1/3">
+            <div className="w-1/5">
               <h2 className="text-lg font-medium text-gray-800">BTC-USDT</h2>
             </div>
-            <div className="w-1/3 text-center">
+            <div className="w-1/5">
+              <h2 className="text-lg font-medium text-gray-800">
+                ${parseFloat(btc[btc.length - 1]).toFixed(3)}
+              </h2>
+              <p className="text-[10px]">
+                (
+                {isNaN(parseInt(Date.now() / 1000 - parseFloat(ts)))
+                  ? parseInt(
+                      Date.now() / 1000 -
+                        parseFloat(localStorage.getItem("datats"))
+                    )
+                  : parseInt(Date.now() / 1000 - parseFloat(ts))}{" "}
+                secs ago)
+              </p>
+            </div>
+            <div className="w-1/5 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
                 {btc[btc.length - 1] - btc[btc.length - 2] > 0 ? (
@@ -108,10 +124,25 @@ const TickerTable = () => {
       {matic.length != 0 && (
         <div className="w-full bg-gray-100 p-4 rounded-lg shadow-md mb-8">
           <div className="flex items-center justify-between">
-            <div className="w-1/3">
+            <div className="w-1/5">
               <h2 className="text-lg font-medium text-gray-800">MATIC-USDT</h2>
             </div>
-            <div className="w-1/3 text-center">
+            <div className="w-1/5">
+              <h2 className="text-lg font-medium text-gray-800">
+                ${parseFloat(matic[matic.length - 1]).toFixed(3)}
+              </h2>
+              <p className="text-[10px]">
+                (
+                {isNaN(parseInt(Date.now() / 1000 - parseFloat(ts)))
+                  ? parseInt(
+                      Date.now() / 1000 -
+                        parseFloat(localStorage.getItem("datats"))
+                    )
+                  : parseInt(Date.now() / 1000 - parseFloat(ts))}{" "}
+                secs ago)
+              </p>
+            </div>
+            <div className="w-1/5 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
                 {matic[matic.length - 1] - matic[matic.length - 2] > 0 ? (
@@ -140,10 +171,25 @@ const TickerTable = () => {
       {bnb.length != 0 && (
         <div className="w-full bg-gray-100 p-4 rounded-lg shadow-md mb-8">
           <div className="flex items-center justify-between">
-            <div className="w-1/3">
+            <div className="w-1/5">
               <h2 className="text-lg font-medium text-gray-800">BNB-USDT</h2>
             </div>
-            <div className="w-1/3 text-center">
+            <div className="w-1/5">
+              <h2 className="text-lg font-medium text-gray-800">
+                ${parseFloat(bnb[bnb.length - 1]).toFixed(3)}
+              </h2>
+              <p className="text-[10px]">
+                (
+                {isNaN(parseInt(Date.now() / 1000 - parseFloat(ts)))
+                  ? parseInt(
+                      Date.now() / 1000 -
+                        parseFloat(localStorage.getItem("datats"))
+                    )
+                  : parseInt(Date.now() / 1000 - parseFloat(ts))}{" "}
+                secs ago)
+              </p>
+            </div>
+            <div className="w-1/5 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
                 {bnb[bnb.length - 1] - bnb[bnb.length - 2] > 0 ? (
@@ -172,10 +218,25 @@ const TickerTable = () => {
       {eth.length != 0 && (
         <div className="w-full bg-gray-100 p-4 rounded-lg shadow-md mb-8">
           <div className="flex items-center justify-between">
-            <div className="w-1/3">
+            <div className="w-1/5">
               <h2 className="text-lg font-medium text-gray-800">ETH-USDT</h2>
             </div>
-            <div className="w-1/3 text-center">
+            <div className="w-1/5">
+              <h2 className="text-lg font-medium text-gray-800">
+                ${parseFloat(eth[eth.length - 1]).toFixed(3)}
+              </h2>
+              <p className="text-[10px]">
+                (
+                {isNaN(parseInt(Date.now() / 1000 - parseFloat(ts)))
+                  ? parseInt(
+                      Date.now() / 1000 -
+                        parseFloat(localStorage.getItem("datats"))
+                    )
+                  : parseInt(Date.now() / 1000 - parseFloat(ts))}{" "}
+                secs ago)
+              </p>
+            </div>
+            <div className="w-1/5 text-center">
               <h3 className="text-lg font-medium text-gray-800">
                 {" "}
                 {eth[eth.length - 1] - eth[eth.length - 2] > 0 ? (
